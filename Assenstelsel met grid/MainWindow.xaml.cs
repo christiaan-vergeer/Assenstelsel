@@ -50,15 +50,47 @@ namespace Assenstelsel_met_grid
                 gridx = zero.Y;
 
 
-                LineX.Margin = new Thickness(0, gridx, 0, 0);
-                LineX.Visibility = Visibility.Visible;
+                //LineX.Margin = new Thickness(0, gridx, 0, 0);
+                //LineX.Visibility = Visibility.Visible;
 
-                LineY.Margin = new Thickness(gridy, 0, 0, 0);
-                LineY.Visibility = Visibility.Visible;
+                //LineY.Margin = new Thickness(gridy, 0, 0, 0);
+                //LineY.Visibility = Visibility.Visible;
+                PathFigure baseliney = new PathFigure();
+                baseliney.StartPoint = new Point(gridy, 0);
+                LineSegment lineSeg1 = new LineSegment();
+                lineSeg1.Point = new Point(gridy, 1200);
+                PathSegmentCollection path1 = new PathSegmentCollection();
+                path1.Add(lineSeg1);
+                baseliney.Segments = path1;
+                PathFigureCollection collection1 = new PathFigureCollection();
+                collection1.Add(baseliney);
+                PathGeometry geo1 = new PathGeometry();
+                geo1.Figures = collection1;
+                Path arcPath1 = new Path();
+                arcPath1.Stroke = new SolidColorBrush(Colors.Red);
+                arcPath1.StrokeThickness = 6;
+                arcPath1.Data = geo1;
+                window.Children.Add(arcPath1);
+
+                PathFigure baselinex = new PathFigure();
+                baselinex.StartPoint = new Point(0, gridx);
+                LineSegment lineSeg2 = new LineSegment();
+                lineSeg2.Point = new Point(1200, gridx);
+                PathSegmentCollection path2 = new PathSegmentCollection();
+                path2.Add(lineSeg2);
+                baselinex.Segments = path2;
+                PathFigureCollection collection2 = new PathFigureCollection();
+                collection2.Add(baselinex);
+                PathGeometry geo2 = new PathGeometry();
+                geo2.Figures = collection2;
+                Path arcPath2 = new Path();
+                arcPath2.Stroke = new SolidColorBrush(Colors.Red);
+                arcPath2.StrokeThickness = 6;
+                arcPath2.Data = geo2;
+                window.Children.Add(arcPath2);
 
 
 
-                
                 for (int i = -1200; i < 1250; i = i + 10)
                 {
 
@@ -217,8 +249,8 @@ namespace Assenstelsel_met_grid
             if(firstTime == 1)
             {
                 firstTime = 0;
-                LineX.Visibility = Visibility.Collapsed;
-                LineY.Visibility = Visibility.Collapsed;
+                //LineX.Visibility = Visibility.Collapsed;
+                //LineY.Visibility = Visibility.Collapsed;
                 window.Children.Clear();
                 window.Background = Brushes.White;
             }
