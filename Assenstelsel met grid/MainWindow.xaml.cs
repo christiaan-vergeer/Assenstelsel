@@ -20,13 +20,13 @@ namespace Assenstelsel_met_grid
     /// </summary>
     public partial class MainWindow : Window
     {
-        int firstTime = 0;
-        double gridx = 0;
-        double gridy = 0;
-        byte Redfill = 0;
+        int firstTime = 0; // flag to check if the grid is deployed
+        double gridx = 0; // memeory of the center x-coord
+        double gridy = 0; // memeory of the ceter y-coord
+        byte Redfill = 0; //RGB values for the dot collor
         byte Greenfill = 0;
         byte Bluefill = 225;
-        byte Redborder = 225;
+        byte Redborder = 225; //RGB values fot the dot border collor
         byte Greenborder = 0;
         byte Blueborder = 0;
 
@@ -36,8 +36,9 @@ namespace Assenstelsel_met_grid
             InitializeComponent();
             LineX.Visibility = Visibility.Collapsed;
             LineY.Visibility = Visibility.Collapsed;
+            //initialeze the colorpickers
             cp.SelectedColor = Colors.Blue;
-            cp2.SelectedColor = Colors.Red;
+            cp2.SelectedColor = Colors.Red; 
         }
 
         private void click(object sender, RoutedEventArgs e)
@@ -48,13 +49,13 @@ namespace Assenstelsel_met_grid
                 firstTime = 1;
                 gridy = zero.X;
                 gridx = zero.Y;
-
-
                 //LineX.Margin = new Thickness(0, gridx, 0, 0);
                 //LineX.Visibility = Visibility.Visible;
 
                 //LineY.Margin = new Thickness(gridy, 0, 0, 0);
                 //LineY.Visibility = Visibility.Visible;
+
+                //drawining 2 large axis
                 PathFigure baseliney = new PathFigure();
                 baseliney.StartPoint = new Point(gridy, 0);
                 LineSegment lineSeg1 = new LineSegment();
@@ -90,7 +91,7 @@ namespace Assenstelsel_met_grid
                 window.Children.Add(arcPath2);
 
 
-
+                //draw the smaler grey lines
                 for (int i = -1200; i < 1250; i = i + 10)
                 {
 
@@ -132,7 +133,7 @@ namespace Assenstelsel_met_grid
                     //arcPath.Fill = new SolidColorBrush(Colors.Yellow);
                     window.Children.Add(arcPath);
                 }
-
+                //draws the medium red lines
                 for (int i = -1200; i < 1250; i = i + 100)
                 {
                     PathFigure line = new PathFigure();
@@ -173,7 +174,7 @@ namespace Assenstelsel_met_grid
                     //arcPath.Fill = new SolidColorBrush(Colors.Yellow);
                     window.Children.Add(arcPath);
                 }
-
+                //draws the numbers near the center axis
                 for (int i = -1200; i < 1250; i = i + 100)
                 {
                     TextBlock box = new TextBlock();
@@ -198,6 +199,7 @@ namespace Assenstelsel_met_grid
                 }
                 window.Background = Brushes.Wheat;
             }
+            //places dot at click if grid is already deployed
             else
             {
                 Ellipse dot = new Ellipse();
@@ -213,6 +215,7 @@ namespace Assenstelsel_met_grid
                 window.Children.Add(dot);
             }
 
+            // outputs the data to the field in the left bottom
             //outputCEN.Content = "(" + gridy + "," + gridx + ")";
             outputSCR.Content = "(" + zero.X + "," + zero.Y + ")";
             zero.X = Math.Round((zero.X - gridy)/10);
@@ -220,6 +223,7 @@ namespace Assenstelsel_met_grid
             outputWIS.Content = "(" + zero.X + "," + zero.Y + ")";
         }
 
+        //colorpickers
         private void cpSelectFill(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
             if (cp.SelectedColor.HasValue)
@@ -244,6 +248,7 @@ namespace Assenstelsel_met_grid
 
         }
 
+        //resest the "window" grid
         private void rest_Click(object sender, RoutedEventArgs e)
         {
             if(firstTime == 1)
@@ -257,6 +262,8 @@ namespace Assenstelsel_met_grid
             
         }
 
+
+        //shuts down the program
         private void afsluiten(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
