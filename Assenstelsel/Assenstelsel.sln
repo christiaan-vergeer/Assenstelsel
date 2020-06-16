@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assenstelsel", "Assenstelsel.csproj", "{898CBD4E-CCF5-49D5-BD0C-68A1C1EF9700}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assenstelsel met grid", "..\Assenstelsel met grid\Assenstelsel met grid.csproj", "{ACD2A6AF-6032-413C-88C8-8D3055FBEFCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{898CBD4E-CCF5-49D5-BD0C-68A1C1EF9700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898CBD4E-CCF5-49D5-BD0C-68A1C1EF9700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898CBD4E-CCF5-49D5-BD0C-68A1C1EF9700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898CBD4E-CCF5-49D5-BD0C-68A1C1EF9700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACD2A6AF-6032-413C-88C8-8D3055FBEFCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD2A6AF-6032-413C-88C8-8D3055FBEFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD2A6AF-6032-413C-88C8-8D3055FBEFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD2A6AF-6032-413C-88C8-8D3055FBEFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1353F469-15C6-4995-A955-32BCC78C7251}
+	EndGlobalSection
+EndGlobal

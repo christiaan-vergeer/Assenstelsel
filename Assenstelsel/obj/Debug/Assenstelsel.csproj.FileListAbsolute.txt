@@ -1,0 +1,15 @@
+C:\Users\chris\source\repos\Assenstelsel\bin\Debug\Assenstelsel.exe.config
+C:\Users\chris\source\repos\Assenstelsel\bin\Debug\Assenstelsel.exe
+C:\Users\chris\source\repos\Assenstelsel\bin\Debug\Assenstelsel.pdb
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.csprojAssemblyReference.cache
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\MainWindow.g.cs
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\App.g.cs
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel_MarkupCompile.cache
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel_MarkupCompile.lref
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\MainWindow.baml
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.g.resources
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.Properties.Resources.resources
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.csproj.GenerateResource.cache
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.exe
+C:\Users\chris\source\repos\Assenstelsel\obj\Debug\Assenstelsel.pdb
